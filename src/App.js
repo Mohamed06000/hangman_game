@@ -1,11 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const Letter = ({ letter, feedback, index, onClick}) => (
+      <div className={`letter ${feedback}`} onClick={() => onClick(index)}>
+      <span className="symbol">
+      </span>
+      </div>
+  )
+
+  function computeDisplay(phrase, usedLetters) {
+    return phrase.replace(/\w/g,
+        (letter) => (usedLetters.has(letter) ? letter : '_')
+    )}
+
+
+
+
   return (
-    <div className="App">
+    <div className="hangman">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
