@@ -1,39 +1,61 @@
 import './App.css';
+import React, { Component } from 'react'
+import shuffle from 'lodash.shuffle'
 
-function App() {
+import Letter from './Letter'
 
-  const Letter = ({ letter, feedback, index, onClick}) => (
-      <div className={`letter ${feedback}`} onClick={() => onClick(index)}>
-      <span className="symbol">
-      </span>
-      </div>
-  )
 
-  function computeDisplay(phrase, usedLetters) {
+const SIDE = 13
+const LETTER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+class App extends Component{
+
+
+    state = {
+        letters: this.generateLetters(),
+        currentPair: [],
+        guesses: 0,
+        matchedCardIndices: [],
+    }
+
+    generateLetters() {
+        const result = []
+        const size = SIDE * SIDE
+        const candidates = shuffle(LETTER)
+        while (result.length < size) {
+            const card = candidates.pop()
+            result.push(card)
+        }
+        return shuffle(result)
+    }
+
+  computeDisplay(phrase, usedLetters) {
     return phrase.replace(/\w/g,
         (letter) => (usedLetters.has(letter) ? letter : '_')
     )}
 
+    handleCardClick = index => {
 
+    }
 
-
-  return (
-    <div className="hangman">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    render() {
+        const { letters, matchedCardIndices } = this.state
+        const won = matchedCardIndices.length === letters.length
+        return (
+            <div className="hangman">
+                {letters.map((letter,index) => (
+                        <Letter
+                            letter={letter}
+                            feedback={'visible'}
+                            key={index}
+                            index={index}
+                            onClick={this.handleCardClick}
+                        />
+                    )
+                )}
+            </div>
+        )
+    }
 }
 
 export default App;
