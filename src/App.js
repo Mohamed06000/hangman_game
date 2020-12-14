@@ -35,7 +35,7 @@ class App extends Component{
     )}
 
     handleCardClick = index => {
-
+        console.log("Clicked")
     }
 
     render() {
