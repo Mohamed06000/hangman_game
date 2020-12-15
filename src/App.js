@@ -1,14 +1,15 @@
 import './App.css';
 import React, { Component } from 'react'
-import shuffle from 'lodash.shuffle'
 
 import Letter from './Letter'
 
 
-const SIDE = 13
+const SIDE = 6
 const LETTER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const WORD = 'Hello'
 
-class App extends Component{
+
+    class App extends Component{
 
 
     state = {
@@ -16,17 +17,28 @@ class App extends Component{
         currentPair: [],
         guesses: 0,
         matchedCardIndices: [],
+        wordHidden: this.hiddenWord(),
+    }
+
+    hiddenWord() {
+        const len = WORD.length
+        let result = ''
+        for (let i = 0; i < len; i++) {
+            result = result + '_'
+        }
+
+        return result
     }
 
     generateLetters() {
         const result = []
         const size = SIDE * SIDE
-        const candidates = shuffle(LETTER)
+        const candidates = LETTER.split('')
         while (result.length < size) {
-            const card = candidates.pop()
+            const card = candidates.shift()
             result.push(card)
         }
-        return shuffle(result)
+        return result
     }
 
   computeDisplay(phrase, usedLetters) {
@@ -34,12 +46,29 @@ class App extends Component{
         (letter) => (usedLetters.has(letter) ? letter : '_')
     )}
 
+    replaceInd(str, index, replacement) {
+        return str.substr(0, index) + replacement + str.substr(index + replacement.length);
+    }
+
+
     handleCardClick = index => {
-        console.log("Clicked")
+        const { letters, wordHidden, matchedCardIndices } = this.state
+        console.log("clicked",letters[index])
+
+        const matched = WORD.toUpperCase().includes(letters[index])
+
+        if (matched) {
+            const ind = WORD.toUpperCase().indexOf(letters[index])
+            this.setState({wordHidden: this.replaceInd(wordHidden, ind, letters[index])})
+            console.log('yes')
+        }
+        else {
+            console.log('no')
+        }
     }
 
     render() {
-        const { letters, matchedCardIndices } = this.state
+        const { letters, matchedCardIndices, wordHidden } = this.state
         const won = matchedCardIndices.length === letters.length
         return (
             <div className="hangman">
@@ -53,6 +82,8 @@ class App extends Component{
                         />
                     )
                 )}
+
+                {wordHidden}
             </div>
         )
     }
