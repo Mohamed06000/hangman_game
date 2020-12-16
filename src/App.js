@@ -14,8 +14,7 @@ const WORD = 'Hello'
 
     state = {
         letters: this.generateLetters(),
-        currentPair: [],
-        guesses: 0,
+        usedLetters: [],
         matchedCardIndices: [],
         wordHidden: this.hiddenWord(),
     }

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2ffadef9-f36c-4bb8-ae37-08ec09439862" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
       <updated>1607798010768</updated>
       <workItem from="1607798013659" duration="3158000" />
       <workItem from="1607882101508" duration="3873000" />
-      <workItem from="1607979059996" duration="9452000" />
+      <workItem from="1607979059996" duration="12870000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607798461520</created>
@@ -101,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607981141751</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="replace hidden word by letters">
+      <created>1608072573471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608072573471</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,36 +117,37 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="add function to replace word" />
     <MESSAGE value="css and clicked ajusted" />
-    <option name="LAST_COMMIT_MESSAGE" value="css and clicked ajusted" />
+    <MESSAGE value="replace hidden word by letters" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace hidden word by letters" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607798535143">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1607798535143" />
-    <state x="425" y="25" key="CommitChangelistDialog2" timestamp="1607981138111">
+    <state x="425" y="25" key="CommitChangelistDialog2" timestamp="1608072571943">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1607981138111" />
-    <state width="789" height="222" key="GridCell.Tab.0.bottom" timestamp="1608063892518">
+    <state x="425" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608072571943" />
+    <state width="789" height="222" key="GridCell.Tab.0.bottom" timestamp="1608145882931">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="789" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608063892518" />
-    <state width="789" height="222" key="GridCell.Tab.0.center" timestamp="1608063892517">
+    <state width="789" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608145882931" />
+    <state width="789" height="222" key="GridCell.Tab.0.center" timestamp="1608145882931">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="789" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608063892517" />
-    <state width="789" height="222" key="GridCell.Tab.0.left" timestamp="1608063892517">
+    <state width="789" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608145882931" />
+    <state width="789" height="222" key="GridCell.Tab.0.left" timestamp="1608145882930">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="789" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608063892517" />
-    <state width="789" height="222" key="GridCell.Tab.0.right" timestamp="1608063892518">
+    <state width="789" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608145882930" />
+    <state width="789" height="222" key="GridCell.Tab.0.right" timestamp="1608145882931">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="789" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608063892518" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1607981146283">
+    <state width="789" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608145882931" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1608072578828">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1607981146283" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608072578828" />
   </component>
 </project>
